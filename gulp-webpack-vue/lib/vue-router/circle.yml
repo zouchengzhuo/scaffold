@@ -1,0 +1,17 @@
+machine:
+  node:
+    version: 5
+
+general:
+  branches:
+    ignore:
+      - dev
+
+dependencies:
+  post:
+    - wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz
+    - tar -xzf sc-latest-linux.tar.gz
+
+test:
+  override:
+    - bash ./build/ci.sh

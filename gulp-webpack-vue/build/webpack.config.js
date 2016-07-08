@@ -3,18 +3,17 @@
  */
 var webpack = require('webpack');
 module.exports={
-    entry: [
-            './public/js/app.js'
-        ],
+    entry: {
+        index:'../src/js/app.js',
+        "vue.min":['../lib/vue/dist/vue.min.js','../lib/vue-router/dist/vue-router.min.js']
+    },
     output:{
-        //配合gulp使用的时候注释掉path配置，生成目录在gulp中配置
-        //path:"./dist/js",
-        publicPath: '/release/js/',
-        filename:"app.bundle.min.js"
+        path:__dirname+'/../release',
+        filename:'[name].js'
     },
     externals: {
         'vue': 'Vue',
-        '$': 'jQuery'
+        'vue-router':'VueRouter'
     },
     plugins: [
         new webpack.optimize.UglifyJsPlugin({

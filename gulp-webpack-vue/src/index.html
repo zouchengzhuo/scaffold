@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <h1>Hello App!</h1>
+    <p>
+        <!-- 使用指令 v-link 进行导航。 -->
+        <a v-link="{ path: '/path1' }">路径一</a>
+        <a v-link="{ path: '/path2' }">路径二</a>
+    </p>
+    <!-- 路由外链 -->
+    <router-view></router-view>
+</div>
+<script src="../release/vue.min.js"></script>
+<script src="../release/app.bundle.js"></script>
+</body>
+</html>

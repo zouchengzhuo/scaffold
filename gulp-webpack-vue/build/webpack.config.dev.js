@@ -2,27 +2,32 @@
  * Created by czzou on 2016/1/20.
  */
 var webpack = require('webpack');
+var path=require('path');
 module.exports={
+    //这里写成数组是为了dev server插入服务配置
     entry: {
-        index:'./src/js/app.js'
+        "app":['../src/js/app.js'],
     },
     output:{
-        path:'./release',
-        filename:'[name].js'
+        path:path.resolve(__dirname, "../release"),//__dirname+'/../release',
+        publicPath: "/release/",//dev server 会从此路径去拿hot-update.json
+        filename:'[name].bundle.js'
     },
     externals: {
-        'vue': 'Vue'
+        'vue': 'Vue',
+        'vue-router':'VueRouter'
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()  // 发生错误时不加载
+
     ],
     module:{
         loaders:[
-            { test: /\.css$/, loader: 'style-loader!css-loader!resolve-url-loader' },
+            {
+                test: /\.html$/,
+                loader: "html"
+            }
         ]
     },
-    devtool: "source-map",
     plugins: [
         new webpack.optimize.UglifyJsPlugin({
             compress: {
@@ -30,5 +35,6 @@ module.exports={
                 warnings: false
             }
         })
-    ]
+    ],
+    devtool: "source-map"
 }

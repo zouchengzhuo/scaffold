@@ -1,0 +1,14 @@
+{
+  "ignore": [
+    "**/node_modules/**",
+    "**/build/**",
+    "**/dist/**",
+    "**/examples/**",
+    "**/docs/**",
+    "**/test/unit/lib/**",
+    "**/lib/**"
+  ],
+  "test": [
+    "**/test/**"
+  ]
+}
