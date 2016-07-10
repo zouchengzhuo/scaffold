@@ -6,7 +6,7 @@ var path=require('path');
 module.exports={
     //这里写成数组是为了dev server插入服务配置
     entry: {
-        "app":['../src/js/app.js'],
+        "app":['../src/app.js'],
     },
     output:{
         path:path.resolve(__dirname, "../release"),//__dirname+'/../release',
@@ -17,24 +17,13 @@ module.exports={
         'vue': 'Vue',
         'vue-router':'VueRouter'
     },
-    plugins: [
-
-    ],
-    module:{
-        loaders:[
-            {
-                test: /\.html$/,
-                loader: "html"
-            }
+    module: {
+        loaders: [
+            { test: /\.css$/, loader: 'style-loader!css-loader' }
         ]
     },
     plugins: [
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                drop_console: true,
-                warnings: false
-            }
-        })
+
     ],
     devtool: "source-map"
 }

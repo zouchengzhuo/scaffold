@@ -5,8 +5,7 @@ var Vue = require('vue')
 var VueRouter = require('vue-router');
 Vue.use(VueRouter);
 var comm1=require('./components/comm1');
-var comm1 = require("./components/comm1");
-
+require('./app.css');
 // 路由器需要一个根组件。
 // 出于演示的目的，这里使用一个空的组件，直接使用 HTML 作为应用的模板
 var App = Vue.extend({})
@@ -20,6 +19,9 @@ var router = new VueRouter()
 // 创建的组件构造函数，也可以是一个组件选项对象。
 // 稍后我们会讲解嵌套路由
 router.map({
+    '/': {
+        component: comm1
+    },
     '/path1': {
         component: comm1
     },
@@ -37,7 +39,8 @@ router.map({
         }
     }
 });
-
+//默认路径
+//router.go('/path1');
 // 现在我们可以启动应用了！
 // 路由器会创建一个 App 实例，并且挂载到选择符 #app 匹配的元素上。
 router.start(App, '#app')

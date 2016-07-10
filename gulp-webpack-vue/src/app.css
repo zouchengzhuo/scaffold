@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+ul.navi{
+    background: #00B4F9;
+    margin: 0;
+    padding: 20px 20px;
+}
+ul.navi li{
+    list-style: none;
+    display: inline-block;
+}
+ul.navi li a{
+    text-decoration: none;
+    color: #ffffff;
+}
