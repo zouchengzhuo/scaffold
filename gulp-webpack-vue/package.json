@@ -6,16 +6,14 @@
   "scripts": {
     "dev": "gulp default --gulpfile build/gulpfile.js",
     "build": "gulp build --gulpfile build/gulpfile.js",
-    "release":"gulp release --gulpfile build/gulpfile.js"
+    "release": "gulp release --gulpfile build/gulpfile.js"
   },
   "keywords": [
     "vue"
   ],
   "author": "zoucz",
   "license": "ISC",
-  "dependencies": {
-
-  },
+  "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",

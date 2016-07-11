@@ -1,1 +1,0 @@
-webpackJsonp([2],{9:function(e,p,t){var n=t(1),a=n.extend({template:"<p>组件2.1(延迟加载组件)</p>"});e.exports=a}});

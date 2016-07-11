@@ -1,1 +1,0 @@
-webpackJsonp([1],{8:function(n,o,t){var e=t(1),c=e.extend({template:"<p>组件二</p><sub-com></sub-com>",components:{"sub-com":function(n){setTimeout(function(){t.e(2,function(o){var t=[o(9)];n.apply(null,t)}.bind(this))},2e3)}}});n.exports=c}});

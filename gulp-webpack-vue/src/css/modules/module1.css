@@ -1,0 +1,9 @@
+.comm1{
+    text-align: center;
+    width: 500px;
+    border: solid thin #cccccc;
+}
+.comm1 tr:first-child{
+    color:#ffffff;
+    background: #00b4f9;
+}

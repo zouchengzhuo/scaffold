@@ -4,8 +4,9 @@
 var Vue = require('vue')
 var VueRouter = require('vue-router');
 Vue.use(VueRouter);
-var comm1=require('./components/comm1');
-require('./app.css');
+var compo1=require('./modules/module1');
+require('./css/main.css');
+
 // 路由器需要一个根组件。
 // 出于演示的目的，这里使用一个空的组件，直接使用 HTML 作为应用的模板
 var App = Vue.extend({})
@@ -20,20 +21,20 @@ var router = new VueRouter()
 // 稍后我们会讲解嵌套路由
 router.map({
     '/': {
-        component: comm1
+        component: compo1
     },
     '/path1': {
-        component: comm1
+        component: compo1
     },
     '/path2': {
         component: function (resolve) {
             //amd规范 实现效果：
             //路由1中的模块和主页面模块打包在一起
             //路由2中的模块按需加载
-            require(['./components/comm2'],resolve);
+            require(['./modules/module2'],resolve);
             //commonJs规范实现方式:
-            //require.ensure(['./components/comm2'],function(require){
-            //    var comm2=require('./components/comm2');
+            //require.ensure([],function(require){
+            //    var comm2=require('./components/compo2');
             //    resolve(comm2)
             //});
         }
