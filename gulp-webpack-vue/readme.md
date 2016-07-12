@@ -17,7 +17,10 @@
 ### 6.1开发
 在根目录运行 npm run dev
 此命令会启动一个webpack dev server，并使用了hot dev-server插件，更新代码后会实时更新打包文件，并刷新浏览器
+
 demo是一个简单的vue项目，使用了vue-router，并演示了模块的延时加载
+
+访问http://localhost:8080/src 可以查看效果
 ### 6.2打包测试代码
 根目录运行 npm run build
 ### 6.3打包线上代码
