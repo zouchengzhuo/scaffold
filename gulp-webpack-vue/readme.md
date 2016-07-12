@@ -28,6 +28,7 @@ demo是一个简单的vue项目，使用了vue-router，并演示了模块的延
 - 不生成map文件
 - 提取出css文件放到一个独立的bundle文件中
 - 打包生成的js代码会带上根据打包文件计算出来的hash
+
 打包生产环境完成后，需要根据项目需求，将打包的文件上传到cdn，或者放到指定的目录，这个就需要根据需求去实现gulp插件来完成了：
 ```javascript
 gulp.task('upload-source',function(){
