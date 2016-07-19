@@ -20,7 +20,8 @@ module.exports={
     },
     module: {
         loaders: [
-            { test: /\.css$/, loader: cssExtract.extract("style-loader", "css-loader") }
+            { test: /\.css$/, loader: cssExtract.extract("style-loader", "css-loader") },
+            {test:/\.html$/,loader:'html-loader'}
         ]
     },
     plugins: [
